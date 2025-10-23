@@ -8,7 +8,6 @@ Website company profile modern dan interaktif untuk toko kopi **CafeInc** dengan
 - NIM: 202310370311058
 - Kelas: Pemrograman Web C
 
-![CafeInc Banner](images/hero/hero-bg.jpg)
 
 ## Features
 
@@ -97,7 +96,7 @@ CafeInc/
     └── orders_log.txt
 ```
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 - **XAMPP** / **WAMP** / **LAMP** (untuk menjalankan PHP)
