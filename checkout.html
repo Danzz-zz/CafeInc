@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - CafeInc</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">CafeInc</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="checkout.html" class="nav-link active">Checkout</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Header -->
+    <section class="page-header checkout-header">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1 class="page-title animate-text">Checkout</h1>
+            <p class="page-subtitle animate-text">Complete Your Order</p>
+        </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <div class="checkout-content">
+                <!-- Order Summary -->
+                <div class="order-summary-section">
+                    <div class="checkout-title-wrapper">
+                        <h2 class="checkout-title">Order Summary</h2>
+                        <button type="button" class="btn-clear-all" id="clearAllBtn" style="display: none;">
+                            Clear All
+                        </button>
+                    </div>
+                    <div class="order-items" id="checkoutOrderItems">
+                        <div class="empty-order">
+                            <p>Your cart is empty</p>
+                            <a href="menu.html" class="btn btn-primary">Browse Menu</a>
+                        </div>
+                    </div>
+                    
+                    <div class="order-total-section" id="orderTotalSection" style="display: none;">
+                        <div class="order-subtotal">
+                            <span>Subtotal:</span>
+                            <span id="checkoutSubtotal">Rp 0</span>
+                        </div>
+                        <div class="order-delivery">
+                            <span>Delivery Fee:</span>
+                            <span id="deliveryFee">Rp 10,000</span>
+                        </div>
+                        <div class="order-total">
+                            <span>Total:</span>
+                            <span id="checkoutTotal">Rp 0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checkout Form -->
+                <div class="checkout-form-section">
+                    <h2 class="checkout-title">Delivery Information</h2>
+                    <form class="checkout-form" id="checkoutForm" action="process_order.php" method="POST">
+                        <div class="form-group">
+                            <label for="customerName">Full Name *</label>
+                            <input type="text" id="customerName" name="customer_name" placeholder="Enter your full name" required>
+                            <span class="form-error" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerEmail">Email Address *</label>
+                            <input type="email" id="customerEmail" name="customer_email" placeholder="your.email@example.com" required>
+                            <span class="form-error" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerPhone">Phone Number *</label>
+                            <input type="tel" id="customerPhone" name="customer_phone" placeholder="08XX-XXXX-XXXX" required>
+                            <span class="form-error" id="phoneError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerAddress">Delivery Address *</label>
+                            <textarea id="customerAddress" name="customer_address" placeholder="Street address, apartment, suite, etc." rows="4" required></textarea>
+                            <span class="form-error" id="addressError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paymentMethod">Payment Method *</label>
+                            <select id="paymentMethod" name="payment_method" required>
+                                <option value="">Select Payment Method</option>
+                                <option value="cash">Cash on Delivery</option>
+                                <option value="card">Credit / Debit Card</option>
+                                <option value="transfer">Bank Transfer</option>
+                                <option value="qris">QRIS</option>
+                            </select>
+                            <span class="form-error" id="paymentError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="orderNotes">Order Notes (Optional)</label>
+                            <textarea id="orderNotes" name="order_notes" placeholder="Special instructions, delivery time preference, etc." rows="3"></textarea>
+                        </div>
+
+                        <!-- Hidden field for order data -->
+                        <input type="hidden" id="orderData" name="order_data">
+                        <input type="hidden" id="orderTotal" name="order_total">
+
+                        <div class="checkout-actions">
+                            <a href="menu.html" class="btn btn-secondary">← Back to Menu</a>
+                            <button type="submit" class="btn btn-primary" id="placeOrderBtn">
+                                Place Order
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="form-response" id="checkoutResponse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CafeInc</h3>
+                    <p>Brewing happiness one cup at a time. Experience the art of coffee with us.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/6281234567890" class="social-icon" target="_blank" title="WhatsApp">
+                            <img src="images/icons/whatsapp-icon-logo-svgrepo-com.svg" alt="WhatsApp">
+                        </a>
+                        <a href="https://instagram.com/cafeinc" class="social-icon" target="_blank" title="Instagram">
+                            <img src="images/icons/instagram-2016-logo-svgrepo-com.svg" alt="Instagram">
+                        </a>
+                        <a href="https://maps.google.com/?q=CafeInc+Malang" class="social-icon" target="_blank" title="Google Maps">
+                            <img src="images/icons/google-maps-platform-svgrepo-com.svg" alt="Google Maps">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get special offers and updates</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn-small">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CafeInc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

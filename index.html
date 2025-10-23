@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CafeInc - Premium Coffee Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">CafeInc</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="checkout.html" class="nav-link">Checkout</a></li>
+                <li><a href="#contact" class="nav-link smooth-scroll">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-text">Welcome to CafeInc</h1>
+            <p class="hero-subtitle animate-text">Where Every Cup Tells a Story</p>
+            <p class="hero-description animate-text">Experience the finest coffee crafted with passion and precision at Malang!</p>
+            <div class="hero-buttons animate-text">
+                <a href="menu.html" class="btn btn-primary">Explore Menu</a>
+                <a href="#about" class="btn btn-secondary smooth-scroll">Learn More</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="arrow-down"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About CafeInc</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Kami Menghadirkan Pengalaman Kopi Terbaik Sejak Tahun 2025</p>
+            </div>
+            <div class="about-content">
+                <div class="about-card fade-in">
+                    <div class="card-icon">
+                        <img src="images/icons/beans-svgrepo-com.svg" alt="Premium Beans Icon">
+                    </div>
+                    <h3>Premium Beans</h3>
+                    <p>Kami menghadirkan biji kopi terbaik dari pertanian berkelas di seluruh dunia, menjamin kualitas yang terbaik.</p>
+                </div>
+                <div class="about-card fade-in">
+                    <div class="card-icon">
+                        <img src="images/icons/barista-server-coffee-coffee-shop-svgrepo-com.svg" alt="Expert Baristas Icon">
+                    </div>
+                    <h3>Expert Baristas</h3>
+                    <p>Barista kami yang  terlatih dalam  membuat kopi, menciptakan seduhan kopi yang sempurna di setiap cangkirnya.
+                </div>
+                <div class="about-card fade-in">
+                    <div class="card-icon">
+                        <img src="images/icons/love-2-svgrepo-com.svg" alt="Made with Love Icon">
+                    </div>
+                    <h3>Made with Love</h3>
+                    <p>Setiap minuman dibuat dengan ketelitian dan penuh semangat, memastikan pengalaman kopi yang tak terlupakan.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Coffee</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Pilihan Kami yang Paling Populer</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card hover-lift">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image">
+                        <img src="images/menu/espresso.jpg" alt="Espresso">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Espresso</h3>
+                        <p class="product-description">Rich, bold, and aromatic single-origin espresso</p>
+                        <div class="product-footer">
+                            <span class="product-price">Rp 18,000</span>
+                            <button class="btn-small add-to-cart" data-product="Espresso">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card hover-lift">
+                    <div class="product-badge new">New</div>
+                    <div class="product-image">
+                        <img src="images/menu/vanilla_latte.jpg" alt="Vanilla Latte">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Vanilla Latte</h3>
+                        <p class="product-description">Smooth espresso with steamed milk and vanilla</p>
+                        <div class="product-footer">
+                            <span class="product-price">Rp 25,000</span>
+                            <button class="btn-small add-to-cart" data-product="Vanilla Latte">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card hover-lift">
+                    <div class="product-badge">Special</div>
+                    <div class="product-image">
+                        <img src="images/menu/caramel_machiato.jpg" alt="Caramel Macchiato">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Caramel Macchiato</h3>
+                        <p class="product-description">Perfect blend of espresso, milk, and caramel</p>
+                        <div class="product-footer">
+                            <span class="product-price">Rp 28,000</span>
+                            <button class="btn-small add-to-cart" data-product="Caramel Macchiato">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number counter" data-target="5000">0</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number counter" data-target="10">0</div>
+                    <div class="stat-label">Drink Varieties</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number counter" data-target="15">0</div>
+                    <div class="stat-label">Expert Baristas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number counter" data-target="100">0</div>
+                    <div class="stat-label">Daily Fresh Brews</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Berikan Kami Pesan atau Masukan!</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">We'd Love to Hear From You</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <img src="images/icons/google-maps-platform-svgrepo-com.svg" alt="Location">
+                        </div>
+                        <h3>Visit Us</h3>
+                        <p>Jl. Tlogomas No. 777<br>Malang, 65144</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <img src="images/icons/whatsapp-icon-logo-svgrepo-com.svg" alt="Contact">
+                        </div>
+                        <h3>Contact Us / WhatsApp</h3>
+                        <p>+62 812-3456-7890<br>+62 9876-543-210</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <img src="images/icons/clock.svg" alt="Open Hours">
+                        </div>
+                        <h3>Open Hours</h3>
+                        <p>Mon - Fri: 07:00 - 22:00<br>Sat - Sun: 08:00 - 23:00</p>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm" action="contact.php" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <span class="form-error" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <span class="form-error" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                            <span class="form-error" id="phoneError"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                            <span class="form-error" id="messageError"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                    <div class="form-response" id="formResponse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CafeInc</h3>
+                    <p>Brewing happiness one cup at a time. Experience the art of coffee with us.</p>
+                    <div class="social-links">
+                        <a href="https://whatsapp.com" class="social-icon" target="_blank" title="WhatsApp">
+                            <img src="images/icons/whatsapp-icon-logo-svgrepo-com.svg" alt="WhatsApp">
+                        </a>
+                        <a href="https://instagram.com" class="social-icon" target="_blank" title="Instagram">
+                            <img src="images/icons/instagram-2016-logo-svgrepo-com.svg" alt="Instagram">
+                        </a>
+                        <a href="https://maps.google.com" class="social-icon" target="_blank" title="Google Maps">
+                            <img src="images/icons/google-maps-platform-svgrepo-com.svg" alt="Google Maps">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get special offers and updates</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn-small">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CafeInc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

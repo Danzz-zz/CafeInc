@@ -1,0 +1,15 @@
+# Order data (do not track)
+orders/
+*.json
+
+# Logs
+*.log
+
+# OS junk files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE/editor
+.vscode/
+.idea/

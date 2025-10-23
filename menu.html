@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu - CafeInc</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">CafeInc</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                <li><a href="checkout.html" class="nav-link">Checkout</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Header -->
+    <section class="page-header menu-header">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1 class="page-title animate-text">Our Menu</h1>
+            <p class="page-subtitle animate-text">Discover Our Delicious Coffee Selection</p>
+        </div>
+    </section>
+
+    <!-- Menu Filter -->
+    <section class="menu-section">
+        <div class="container">
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="espresso">Espresso</button>
+                <button class="filter-btn" data-filter="latte">Latte</button>
+                <button class="filter-btn" data-filter="specialty">Specialty</button>
+                <button class="filter-btn" data-filter="iced">Iced Coffee</button>
+                <button class="filter-btn" data-filter="non-coffee">Non-Coffee</button>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="menuSearch" placeholder="Cari minuman favorit Anda...">
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- Espresso Category -->
+                <div class="menu-item" data-category="espresso">
+                    <div class="menu-item-image">
+                        <img src="images/menu/espresso.jpg" alt="Espresso">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Espresso</h3>
+                            <span class="price">Rp 18,000</span>
+                        </div>
+                        <p class="menu-item-description">Pure, intense shot of our finest blend</p>
+                        <div class="menu-item-meta">
+                            <span class="tag">Hot</span>
+                            <span class="rating">⭐ 4.8</span>
+                        </div>
+                        <button class="btn-add-cart" data-item="Espresso" data-price="18000">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="espresso">
+                    <div class="menu-item-image">
+                        <img src="images/menu/americano.jpg" alt="Americano">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Americano</h3>
+                            <span class="price">Rp 20,000</span>
+                        </div>
+                        <p class="menu-item-description">Espresso with hot water, smooth and bold</p>
+                        <div class="menu-item-meta">
+                            <span class="tag">Hot</span>
+                            <span class="rating">⭐ 4.6</span>
+                        </div>
+                        <button class="btn-add-cart" data-item="Americano" data-price="20000">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Latte Category -->
+                <div class="menu-item" data-category="latte">
+                    <div class="menu-item-image">
+                        <img src="images/menu/vanilla_latte.jpg" alt="Vanilla Latte">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Vanilla Latte</h3>
+                            <span class="price">Rp 25,000</span>
+                        </div>
+                        <p class="menu-item-description">Espresso with steamed milk and vanilla syrup</p>
+                        <div class="menu-item-meta">
+                            <span class="tag popular">Popular</span>
+                            <span class="rating">⭐ 4.9</span>
+                        </div>
+                        <button class="btn-add-cart" data-item="Vanilla Latte" data-price="25000">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="latte">
+                    <div class="menu-item-image">
+                        <img src="images/menu/cappucino.jpg" alt="Cappuccino">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Cappuccino</h3>
+                            <span class="price">Rp 23,000</span>
+                        </div>
+                        <p class="menu-item-description">Perfect balance of espresso, milk, and foam</p>
+                        <div class="menu-item-meta">
+                            <span class="tag">Hot</span>
+                            <span class="rating">⭐ 4.8</span>
+                        </div>
+                        <button class="btn-add-cart" data-item="Cappuccino" data-price="23000">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="latte">
+                    <div class="menu-item-image">
+                        <img src="images/menu/hazelnut_latte.jpg" alt="Hazelnut Latte">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Hazelnut Latte</h3>
+                            <span class="price">Rp 28,000</span>
+                        </div>
+                        <p class="menu-item-description">Rich hazelnut flavor with smooth espresso</p>
+                        <div class="menu-item-meta">
+                            <span class="tag cold">Cold</span>
+                            <span class="rating">⭐ 4.7</span>
+                        </div>
+                        <button class="btn-add-cart" data-item="Hazelnut Latte" data-price="28000">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Specialty Category -->
+                <div class="menu-item" data-category="specialty">
+                    <div class="menu-item-image">
+                        <img src="images/menu/caramel_machiato.jpg" alt="Caramel Macchiato">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Caramel Macchiato</h3>
+                            <span class="price">Rp 28,000</span>
+                        </div>
+                        <p class="menu-item-description">Espresso marked with caramel and vanilla</p>
+                        <div class="menu-item-meta">
+                            <span class="tag special">Special</span>
+                            <span class="rating">⭐ 5.0</span>
+                        </div>
+                        <button class="btn-add-cart" data-item="Caramel Macchiato" data-price="28000">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Iced Coffee Category -->
+                <div class="menu-item" data-category="iced">
+                    <div class="menu-item-image">
+                        <img src="images/menu/iced_latte.jpg" alt="Iced Latte">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Iced Latte</h3>
+                            <span class="price">Rp 23,000</span>
+                        </div>
+                        <p class="menu-item-description">Refreshing cold espresso with milk</p>
+                        <div class="menu-item-meta">
+                            <span class="tag cold">Cold</span>
+                            <span class="rating">⭐ 4.7</span>
+                        </div>
+                        <button class="btn-add-cart" data-item="Iced Latte" data-price="23000">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="iced">
+                    <div class="menu-item-image">
+                        <img src="images/menu/iced_americano.jpg" alt="Iced Americano">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Iced Americano</h3>
+                            <span class="price">Rp 22,000</span>
+                        </div>
+                        <p class="menu-item-description">Cool and bold espresso over ice</p>
+                        <div class="menu-item-meta">
+                            <span class="tag cold">Cold</span>
+                            <span class="rating">⭐ 4.6</span>
+                        </div>
+                        <button class="btn-add-cart" data-item="Iced Americano" data-price="22000">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="iced">
+                    <div class="menu-item-image">
+                        <img src="images/menu/cold_brew.jpg" alt="Cold Brew">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Cold Brew</h3>
+                            <span class="price">Rp 22,000</span>
+                        </div>
+                        <p class="menu-item-description">Smooth, slow-steeped coffee</p>
+                        <div class="menu-item-meta">
+                            <span class="tag popular">Popular</span>
+                            <span class="rating">⭐ 4.9</span>
+                        </div>
+                        <button class="btn-add-cart" data-item="Cold Brew" data-price="22000">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Non-Coffee Category -->
+                <div class="menu-item" data-category="non-coffee">
+                    <div class="menu-item-image">
+                        <img src="images/menu/matcha.jpg" alt="Matcha">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Matcha</h3>
+                            <span class="price">Rp 25,000</span>
+                        </div>
+                        <p class="menu-item-description">Creamy matcha green tea with milk</p>
+                        <div class="menu-item-meta">
+                            <span class="tag">Hot/Cold</span>
+                            <span class="rating">⭐ 4.7</span>
+                        </div>
+                        <button class="btn-add-cart" data-item="Matcha" data-price="25000">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="non-coffee">
+                    <div class="menu-item-image">
+                        <img src="images/menu/hot_chocolate.jpg" alt="Hot Chocolate">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Hot Chocolate</h3>
+                            <span class="price">Rp 25,000</span>
+                        </div>
+                        <p class="menu-item-description">Rich and creamy chocolate drink</p>
+                        <div class="menu-item-meta">
+                            <span class="tag">Hot</span>
+                            <span class="rating">⭐ 4.8</span>
+                        </div>
+                        <button class="btn-add-cart" data-item="Hot Chocolate" data-price="25000">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="non-coffee">
+                    <div class="menu-item-image">
+                        <img src="images/menu/thai_tea.jpg" alt="Thai Tea">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Thai Tea</h3>
+                            <span class="price">Rp 25,000</span>
+                        </div>
+                        <p class="menu-item-description">Sweet and creamy Thai tea with milk</p>
+                        <div class="menu-item-meta">
+                            <span class="tag cold">Cold</span>
+                            <span class="rating">⭐ 4.6</span>
+                        </div>
+                        <button class="btn-add-cart" data-item="Thai Tea" data-price="25000">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <h3>No items found</h3>
+                <p>Try adjusting your search or filter to find what you're looking for.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <button class="cart-close" id="cartClose">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">Rp 0</span>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Cart Button -->
+    <button class="cart-button" id="cartButton">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CafeInc</h3>
+                    <p>Brewing happiness one cup at a time. Experience the art of coffee with us.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/6281234567890" class="social-icon" target="_blank" title="WhatsApp">
+                            <img src="images/icons/whatsapp-icon-logo-svgrepo-com.svg" alt="WhatsApp">
+                        </a>
+                        <a href="https://instagram.com/cafeinc" class="social-icon" target="_blank" title="Instagram">
+                            <img src="images/icons/instagram-2016-logo-svgrepo-com.svg" alt="Instagram">
+                        </a>
+                        <a href="https://maps.google.com/?q=CafeInc+Malang" class="social-icon" target="_blank" title="Google Maps">
+                            <img src="images/icons/google-maps-platform-svgrepo-com.svg" alt="Google Maps">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get special offers and updates</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn-small">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CafeInc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
